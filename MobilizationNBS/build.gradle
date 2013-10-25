@@ -1,19 +1,37 @@
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:0.9.+'
+        classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
     }
 }
 apply plugin: 'android'
+apply plugin: 'android-test'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.10'
+    testCompile 'org.robolectric:robolectric:2.3-SNAPSHOT'
+    testCompile 'com.squareup:fest-android:1.0.+'
+}
 
 android {
     compileSdkVersion 19
     buildToolsVersion "19.0.3"
 
-    buildTypes{
-        alpha{
+    buildTypes {
+        alpha {
             packageNameSuffix = ".alpha"
             signingConfig signingConfigs.debug
         }

@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
         public void onViewCreated(View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
             TextView texview = (TextView) view.findViewById(R.id.package_name);
-            texview.setText("Package name: " + getActivity().getPackageName());
+            texview.setText("Pckagee name: " + getActivity().getPackageName());
         }
     }
 
