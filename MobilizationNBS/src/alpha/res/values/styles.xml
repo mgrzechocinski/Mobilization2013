@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#FF0000</item>
+    </style>
+
+</resources>

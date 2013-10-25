@@ -11,4 +11,11 @@ apply plugin: 'android'
 android {
     compileSdkVersion 19
     buildToolsVersion "19.0.3"
+
+    buildTypes{
+        alpha{
+            packageNameSuffix = ".alpha"
+            signingConfig signingConfigs.debug
+        }
+    }
 }
